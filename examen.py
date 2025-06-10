@@ -178,26 +178,27 @@ st.markdown("""
 ### **Pregunta 1:** ¿Existe una relación entre el tipo de crimen y el sexo de la víctima?
 
 **Respuesta:**  
-Sí, existe una relación significativa entre el tipo de crimen y el sexo de la víctima. La prueba de **Chi-cuadrado** mostró un **p-valor < 0.05**, lo que indica dependencia entre ambas variables. Esto se respalda con un gráfico de barras apiladas, donde se observa que ciertos delitos son más frecuentes en mujeres (como violencia doméstica) y otros en hombres (como agresiones físicas).
+Sí, existe una relación significativa entre el tipo de crimen y el sexo de la víctima. La prueba de **Chi-cuadrado** mostró un **p-valor < 0.05**, lo que indica dependencia entre ambas variables.Esto se respalda visualmente con el gráfico de barras apiladas, en el cual se observa que ciertos delitos son más frecuentes en hombres (como Battery - Simple Assault o Aggravated Assault), mientras que otros presentan una mayor proporción de mujeres víctimas, aunque en menor número general.
+Este patrón sugiere que el sexo de la víctima influye en la probabilidad de ser afectado por determinados tipos de crímenes."
 
 ---
 
 ### **Pregunta 2:** ¿La edad de las víctimas varía según el tipo de crimen?
 
 **Respuesta:**  
-Sí, según la prueba de **Kruskal-Wallis**, hay diferencias estadísticamente significativas entre las edades de las víctimas en función del tipo de crimen (p-valor < 0.05). Los **boxplots** mostraron que los delitos como robo tienden a afectar a personas jóvenes, mientras que fraudes y estafas involucran mayormente a personas mayores.
+Sí, la edad de las víctimas varía significativamente según el tipo de crimen. La prueba de Kruskal-Wallis arrojó un valor de H = 134.12 con un p-valor ≈ 7.52e-30, lo que confirma diferencias estadísticamente significativas entre los grupos analizados. En el boxplot se observa que delitos como “Battery - Simple Assault” presentan víctimas de mayor edad en promedio, mientras que crímenes como “Burglary from Vehicle” y “Assault with Deadly Weapon” tienden a involucrar víctimas más jóvenes. Además, se aprecia una mayor dispersión de edades en algunos delitos
 
 ---
 
 ### **Pregunta 3:** ¿Existe una diferencia significativa en la edad promedio entre víctimas hombres y mujeres?
 
 **Respuesta:**  
-Sí, la **prueba t de Student** para muestras independientes reveló una diferencia significativa (p-valor < 0.05) entre la edad promedio de víctimas hombres y mujeres. En promedio, las **mujeres víctimas son más jóvenes** que los hombres, como se visualiza también en los **boxplots** por sexo.
+Sí, existe una diferencia significativa en la edad promedio entre víctimas hombres y mujeres. La prueba t-test para muestras independientes arrojó un valor de t = 16.29 con un p-valor ≈ 1.63e-59, indicando que la diferencia observada no es producto del azar. En el boxplot se aprecia que los hombres víctimas presentan una mediana de edad más alta en comparación con las mujeres víctimas, cuya distribución está más concentrada en edades jóvenes. 
 
 ---
 
 ### **Pregunta 4:** ¿Existe una correlación entre la edad de la víctima y la ubicación del crimen?
 
 **Respuesta:**  
-No, el **mapa de calor de la matriz de correlación** mostró valores bajos entre Edad Víctima, Latitud y Longitud (cercanos a 0), lo que indica que **no existe una correlación lineal fuerte** entre edad y ubicación. 
+No se encontró una correlación significativa entre la edad de la víctima y la ubicación geográfica del crimen. La matriz de correlación muestra valores cercanos a cero entre Edad Víctima y las variables Latitud y Longitud, específicamente -0.01 y 0.01, lo que indica ausencia de una relación lineal entre estas variables. Aunque Latitud y Longitud presentan una correlación negativa perfecta entre sí (-1.00), esto responde a una característica propia del sistema de coordenadas y no a una relación con la edad. En conclusion, no hay evidencia estadística que sugiera que la edad de la víctima varíe según la zona geográfica en la que ocurre el crimen.
 """)
