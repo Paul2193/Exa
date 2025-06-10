@@ -175,12 +175,29 @@ st.write("Conclusión: Las correlaciones entre edad, latitud y longitud son muy 
 # Conclusión global
 st.header('Conclusiones Generales')
 st.markdown("""
-El análisis estadístico realizado sobre los registros de crímenes en Los Ángeles revela lo siguiente:
+### **Pregunta 1:** ¿Existe una relación entre el tipo de crimen y el sexo de la víctima?
 
-1. **Tipo de crimen y sexo:** Existe una asociación significativa, indicando que algunos delitos afectan de forma distinta a hombres y mujeres. Por ejemplo, ciertos crímenes violentos son más frecuentes en hombres, mientras que otros como violencia doméstica son más comunes en mujeres.
+**Respuesta:**  
+Sí, existe una relación significativa entre el tipo de crimen y el sexo de la víctima. La prueba de **Chi-cuadrado** mostró un **p-valor < 0.05**, lo que indica dependencia entre ambas variables. Esto se respalda con un gráfico de barras apiladas, donde se observa que ciertos delitos son más frecuentes en mujeres (como violencia doméstica) y otros en hombres (como agresiones físicas).
 
-2. **Edad según tipo de crimen:** Se encontraron diferencias significativas, lo que muestra que algunos delitos están relacionados con grupos etarios específicos. Delitos como fraude tienden a involucrar a adultos mayores.
+---
 
-3. **Edad por sexo:** Las mujeres víctimas tienden a ser más jóvenes que los hombres víctimas, lo que podría implicar distintos contextos de vulnerabilidad o exposición al riesgo.
+### **Pregunta 2:** ¿La edad de las víctimas varía según el tipo de crimen?
 
+**Respuesta:**  
+Sí, según la prueba de **Kruskal-Wallis**, hay diferencias estadísticamente significativas entre las edades de las víctimas en función del tipo de crimen (p-valor < 0.05). Los **boxplots** mostraron que los delitos como robo tienden a afectar a personas jóvenes, mientras que fraudes y estafas involucran mayormente a personas mayores.
+
+---
+
+### **Pregunta 3:** ¿Existe una diferencia significativa en la edad promedio entre víctimas hombres y mujeres?
+
+**Respuesta:**  
+Sí, la **prueba t de Student** para muestras independientes reveló una diferencia significativa (p-valor < 0.05) entre la edad promedio de víctimas hombres y mujeres. En promedio, las **mujeres víctimas son más jóvenes** que los hombres, como se visualiza también en los **boxplots** por sexo.
+
+---
+
+### **Pregunta 4:** ¿Existe una correlación entre la edad de la víctima y la ubicación del crimen?
+
+**Respuesta:**  
+No, el **mapa de calor de la matriz de correlación** mostró valores bajos entre Edad Víctima, Latitud y Longitud (cercanos a 0), lo que indica que **no existe una correlación lineal fuerte** entre edad y ubicación. 
 """)
